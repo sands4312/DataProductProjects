@@ -1,0 +1,19 @@
+---
+title: "Interative Map"
+author: "Sandesh"
+date: "11/1/2019"
+output: 
+  html_document: 
+    keep_md: yes
+---
+
+# Interatcive Maps using R Markdown and Leaflets
+```{r}
+library(leaflet)
+library(shiny)
+```
+```{r}
+my_map <- leaflet() %>% addTiles() 
+my_map <- my_map %>% addMarkers(lng=103.7758052, lat=1.3283259, popup="My School")
+my_map
+```
